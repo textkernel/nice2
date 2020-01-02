@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Footer component that renders a copyright text on the left and optional children on the right side should render correctly with TK copyright 1`] = `
-<Footer>
+<Footer
+  year={2019}
+>
   <footer
     className="Footer"
   >
