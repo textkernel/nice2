@@ -31,7 +31,7 @@ export interface Props
 
 const { block } = bem('Button', styles);
 
-export const Button: React.FC<Props> = React.forwardRef((props, ref) => {
+export const Button = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
     const { children, context, disabled, isBlock, isInline, type, href, size, ...rest } = props;
 
     if (href) {

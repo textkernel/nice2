@@ -17,7 +17,7 @@ interface Props extends React.HTMLAttributes<HTMLElement> {
 
 const { block, elem } = bem('SelectedOption', styles);
 
-export const SelectedOption: React.FC<Props> = React.forwardRef((props, ref) => {
+export const SelectedOption = React.forwardRef<HTMLElement, Props>((props, ref) => {
     const { As = 'div', children, onDelete, ...rest } = props;
 
     const handleKeyDown = (e) => {

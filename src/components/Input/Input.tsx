@@ -22,7 +22,7 @@ interface Props extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'
 
 const { block } = bem('Input', styles);
 
-export const Input: React.FC<Props> = React.forwardRef((props, ref) => {
+export const Input = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
     const { children, context, disabled, isBlock, size, type, value, ...rest } = props;
     const isLastPassDisabled = type !== 'password';
     return (

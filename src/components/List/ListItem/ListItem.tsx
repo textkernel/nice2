@@ -23,7 +23,7 @@ interface Props extends Omit<React.HTMLAttributes<HTMLLIElement>, 'onClick'> {
 
 const { block, elem } = bem('ListItem', styles);
 
-export const ListItem: React.FC<Props> = React.forwardRef((props, ref) => {
+export const ListItem = React.forwardRef<HTMLLIElement, Props>((props, ref) => {
     const {
         children,
         isSelected,

@@ -13,8 +13,8 @@
         "outDir": "./dist",
         "declarationDir": "./dist/dts",
         "paths": {
-            "@textkernel/oneui": ["src"],
-            "@textkernel/oneui/*": ["src/*"]
+            "@textkernel/oneui": ["dist/dts/src"],
+            "@textkernel/oneui/*": ["dist/dts/src/*"]
         }
     },
     "include": ["src", "stories", "scripts"]

@@ -45,7 +45,7 @@ const adjustSize = (preserveAspectRatio: boolean, size?: number) => {
     };
 };
 
-export const IconBase: React.FC<Props> = React.forwardRef((props, ref) => {
+export const IconBase = React.forwardRef<HTMLDivElement, Props>((props, ref) => {
     const { children, context, margin, size, preserveAspectRatio, title, viewBox, ...rest } = props;
 
     return (

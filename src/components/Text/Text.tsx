@@ -18,7 +18,7 @@ interface Props extends React.HTMLAttributes<HTMLElement> {
 
 const { block } = bem('Text', styles);
 
-export const Text: React.FC<Props> = React.forwardRef((props, ref) => {
+export const Text = React.forwardRef<HTMLSpanElement, Props>((props, ref) => {
     const { children, context, inline, size, ...rest } = props;
     const HtmlNodeType = inline ? 'span' : 'p';
 

@@ -13,7 +13,7 @@ interface Props extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 
 const { block } = bem('Link', styles);
 
-export const Link: React.FC<Props> = React.forwardRef((props, ref) => {
+export const Link = React.forwardRef<HTMLAnchorElement, Props>((props, ref) => {
     const { children, context, ...rest } = props;
     return (
         <a ref={ref} {...rest} {...block(props)}>

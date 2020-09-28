@@ -2,7 +2,7 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { select, text, withKnobs } from '@storybook/addon-knobs';
 import { Heading } from '@textkernel/oneui';
-import { HEADING_SIZES } from '@textkernel/oneui/constants';
+import { HEADING_SIZES } from '../src/constants';
 
 storiesOf('Atoms|Heading', module)
     .addDecorator(withKnobs)

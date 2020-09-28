@@ -2,7 +2,7 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
 import { Alert } from '@textkernel/oneui';
-import { CONTEXTS } from '@textkernel/oneui/constants';
+import { CONTEXTS } from '../src/constants';
 
 storiesOf('Molecules|Alert', module)
     .addDecorator(withKnobs)
