@@ -2,7 +2,7 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
 import { Input } from '@textkernel/oneui';
-import { INPUT_TYPES, SIZES } from '@textkernel/oneui/constants';
+import { INPUT_TYPES, SIZES } from '../src/constants';
 
 const validationContextOptions = {
     None: undefined,

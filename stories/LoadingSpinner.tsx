@@ -2,7 +2,7 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { boolean, number, select, text, withKnobs } from '@storybook/addon-knobs';
 import { LoadingSpinner } from '@textkernel/oneui';
-import { CONTEXTS } from '@textkernel/oneui/constants';
+import { CONTEXTS } from '../src/constants';
 
 storiesOf('Molecules|LoadingSpinner', module)
     .addDecorator(withKnobs)

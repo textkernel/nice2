@@ -2,7 +2,7 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
 import { TextArea } from '@textkernel/oneui';
-import { CONTEXTS, SIZES } from '@textkernel/oneui/constants';
+import { CONTEXTS, SIZES } from '../src/constants';
 
 storiesOf('Atoms|TextArea', module)
     .addDecorator(withKnobs)
