@@ -266,6 +266,7 @@ exports[`LocationSelectorDialog component should render correctly 1`] = `
       disabled={false}
       isBlock={false}
       isInline={false}
+      isLoading={false}
       onClick={[MockFunction]}
       size="normal"
       type="button"

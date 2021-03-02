@@ -10,7 +10,7 @@ describe('<Button> that renders a button', () => {
     });
     it('should add classes when props are changed', () => {
         const wrapper = mount(
-            <Button context="primary" size="large" isBlock>
+            <Button context="primary" size="large" isBlock isLoading>
                 <span>Click me</span>
             </Button>
         );

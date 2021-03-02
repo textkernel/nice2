@@ -23,6 +23,7 @@ exports[`FieldWrapper should add clear button if showClearButton is true 1`] = `
       disabled={false}
       isBlock={false}
       isInline={true}
+      isLoading={false}
       onClick={[Function]}
       size="normal"
       type="button"

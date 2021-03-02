@@ -6,11 +6,12 @@ exports[`<Button> that renders a button should add classes when props are change
   disabled={false}
   isBlock={true}
   isInline={false}
+  isLoading={true}
   size="large"
   type="button"
 >
   <button
-    className="Button Button--context_primary Button--size_large Button--isBlock"
+    className="Button Button--context_primary Button--size_large Button--isBlock Button--isLoading"
     disabled={false}
     type="button"
   >
@@ -28,6 +29,7 @@ exports[`<Button> that renders a button should render an ancor element if href i
   href="/"
   isBlock={false}
   isInline={false}
+  isLoading={false}
   size="normal"
   type="button"
 >
@@ -46,6 +48,7 @@ exports[`<Button> that renders a button should render default button correctly 1
   disabled={false}
   isBlock={false}
   isInline={false}
+  isLoading={false}
   size="normal"
   type="button"
 >

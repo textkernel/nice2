@@ -1,3 +1,13 @@
+@keyframes buttonLoading {
+    0% {
+        background-position: 100% 0;
+    }
+
+    100% {
+        background-position: -100% 0;
+    }
+}
+
 .Button {
     display: inline-flex;
     align-items: center;
@@ -53,6 +63,18 @@
 
     &--isInline {
         padding: 0 var(--spacing-2x);
+    }
+
+    &--isLoading {
+        background-image: linear-gradient(to right, white 0%, var(--color-neutral-10) 100%);
+        background-size: 200% 100%;
+        animation:{
+            duration: 2s;
+            fill-mode: forwards;
+            iteration-count: infinite;
+            name: buttonLoading;
+            timing-function: ease-out;
+        }
     }
 
     &--context {
@@ -123,6 +145,21 @@
                 &[disabled] {
                     background-color: var(--color-#{$context}-25);
                     border-color: var(--color-#{$context}-25);
+                }
+
+                &.Button--isLoading {
+                    --button-gradient: linear-gradient(to right, var(--color-#{$context}-40) 0%, var(--color-#{$context}-40) 50%, var(--color-#{$context}) 100%);
+                    background-image: var(--button-gradient);
+                    border-image: var(--button-gradient);
+
+                    &[disabled] {
+                        background-image: linear-gradient(to right, var(--color-#{$context}-25) 0%, var(--color-#{$context}-25) 50%, var(--color-#{$context}-40) 100%);
+                    }
+
+                    &:hover:not([disabled]) {
+                        background-image: none;
+                        border-image: none;
+                    }
                 }
             }
         }

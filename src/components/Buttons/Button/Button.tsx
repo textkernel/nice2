@@ -19,6 +19,8 @@ export interface Props
     isBlock?: boolean;
     /** Whether or not to show inline button (without padding) */
     isInline?: boolean;
+    /** Whether or not to show the button in loading state */
+    isLoading?: boolean;
     /** Should button be disabled or not */
     disabled?: boolean;
     /** Type of the button */
@@ -32,7 +34,18 @@ export interface Props
 const { block } = bem('Button', styles);
 
 export const Button: React.FC<Props> = React.forwardRef((props, ref) => {
-    const { children, context, disabled, isBlock, isInline, type, href, size, ...rest } = props;
+    const {
+        children,
+        context,
+        disabled,
+        isBlock,
+        isInline,
+        isLoading,
+        type,
+        href,
+        size,
+        ...rest
+    } = props;
 
     if (href) {
         return (
@@ -56,6 +69,7 @@ Button.defaultProps = {
     size: 'normal',
     isBlock: false,
     isInline: false,
+    isLoading: false,
     disabled: false,
     type: 'button',
 };

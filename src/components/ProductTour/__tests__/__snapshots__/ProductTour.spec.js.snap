@@ -187,6 +187,7 @@ exports[`ProductTour general rendering of first slide should render correctly wi
                     disabled={false}
                     isBlock={false}
                     isInline={false}
+                    isLoading={false}
                     onClick={[Function]}
                     size="normal"
                     type="button"
@@ -560,6 +561,7 @@ exports[`ProductTour general rendering of first slide should render correctly wi
                     disabled={false}
                     isBlock={false}
                     isInline={false}
+                    isLoading={false}
                     onClick={[Function]}
                     size="normal"
                     type="button"
@@ -578,6 +580,7 @@ exports[`ProductTour general rendering of first slide should render correctly wi
                     disabled={false}
                     isBlock={false}
                     isInline={false}
+                    isLoading={false}
                     onClick={[Function]}
                     size="normal"
                     type="button"
