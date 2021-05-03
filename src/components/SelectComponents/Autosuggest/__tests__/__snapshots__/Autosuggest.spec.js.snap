@@ -12,6 +12,7 @@ exports[`Autosuggest rendering should initially render empty component correctly
   onSelectionAdd={[MockFunction]}
   onSelectionRemove={[MockFunction]}
   onSubmit={null}
+  selectFirstOnOutClick={false}
   selectedSuggestions={Array []}
   suggestionToKey={null}
   suggestionToString={[Function]}
@@ -24,6 +25,7 @@ exports[`Autosuggest rendering should initially render empty component correctly
     clearTitle=""
     focusedRenderer={[Function]}
     highlightOnEmptyInput={false}
+    indexToSelectOnOutClick={-1}
     inputRef={
       Object {
         "current": <input
@@ -149,6 +151,7 @@ exports[`Autosuggest rendering should initially render focused component correct
   onSelectionAdd={[MockFunction]}
   onSelectionRemove={[MockFunction]}
   onSubmit={null}
+  selectFirstOnOutClick={false}
   selectedSuggestions={Array []}
   suggestionToKey={null}
   suggestionToString={[Function]}
@@ -161,6 +164,7 @@ exports[`Autosuggest rendering should initially render focused component correct
     clearTitle=""
     focusedRenderer={[Function]}
     highlightOnEmptyInput={false}
+    indexToSelectOnOutClick={-1}
     inputRef={
       Object {
         "current": <input
@@ -288,6 +292,7 @@ exports[`Autosuggest rendering should initially render focused component with su
   onSelectionAdd={[MockFunction]}
   onSelectionRemove={[MockFunction]}
   onSubmit={null}
+  selectFirstOnOutClick={false}
   selectedSuggestions={Array []}
   suggestionToKey={null}
   suggestionToString={[Function]}
@@ -327,6 +332,7 @@ exports[`Autosuggest rendering should initially render focused component with su
     clearTitle=""
     focusedRenderer={[Function]}
     highlightOnEmptyInput={false}
+    indexToSelectOnOutClick={-1}
     inputRef={
       Object {
         "current": <input
@@ -906,6 +912,7 @@ exports[`Autosuggest rendering should render component with suggestions 1`] = `
   onSelectionAdd={[MockFunction]}
   onSelectionRemove={[MockFunction]}
   onSubmit={null}
+  selectFirstOnOutClick={false}
   selectedSuggestions={Array []}
   suggestionToKey={null}
   suggestionToString={[Function]}
@@ -945,6 +952,7 @@ exports[`Autosuggest rendering should render component with suggestions 1`] = `
     clearTitle=""
     focusedRenderer={[Function]}
     highlightOnEmptyInput={false}
+    indexToSelectOnOutClick={-1}
     inputRef={
       Object {
         "current": <input
@@ -1525,6 +1533,7 @@ exports[`Autosuggest rendering should render isLoading state 1`] = `
   onSelectionAdd={[MockFunction]}
   onSelectionRemove={[MockFunction]}
   onSubmit={null}
+  selectFirstOnOutClick={false}
   selectedSuggestions={Array []}
   suggestionToKey={null}
   suggestionToString={[Function]}
@@ -1537,6 +1546,7 @@ exports[`Autosuggest rendering should render isLoading state 1`] = `
     clearTitle=""
     focusedRenderer={[Function]}
     highlightOnEmptyInput={false}
+    indexToSelectOnOutClick={-1}
     inputRef={
       Object {
         "current": <input
@@ -1916,6 +1926,7 @@ exports[`Autosuggest rendering should show "no suggestions" placeholder only if 
   onSelectionAdd={[MockFunction]}
   onSelectionRemove={[MockFunction]}
   onSubmit={null}
+  selectFirstOnOutClick={false}
   selectedSuggestions={Array []}
   suggestionToKey={null}
   suggestionToString={[Function]}
@@ -1928,6 +1939,7 @@ exports[`Autosuggest rendering should show "no suggestions" placeholder only if 
     clearTitle=""
     focusedRenderer={[Function]}
     highlightOnEmptyInput={false}
+    indexToSelectOnOutClick={-1}
     inputRef={
       Object {
         "current": <input
@@ -2069,6 +2081,7 @@ exports[`Autosuggest rendering should show "no suggestions" placeholder only if 
   onSelectionAdd={[MockFunction]}
   onSelectionRemove={[MockFunction]}
   onSubmit={null}
+  selectFirstOnOutClick={false}
   selectedSuggestions={Array []}
   suggestionToKey={null}
   suggestionToString={[Function]}
@@ -2081,6 +2094,7 @@ exports[`Autosuggest rendering should show "no suggestions" placeholder only if 
     clearTitle=""
     focusedRenderer={[Function]}
     highlightOnEmptyInput={false}
+    indexToSelectOnOutClick={-1}
     inputRef={
       Object {
         "current": <input
@@ -2274,6 +2288,7 @@ exports[`Autosuggest rendering should show "no suggestions" placeholder only if 
   onSelectionAdd={[MockFunction]}
   onSelectionRemove={[MockFunction]}
   onSubmit={null}
+  selectFirstOnOutClick={false}
   selectedSuggestions={Array []}
   suggestionToKey={null}
   suggestionToString={[Function]}
@@ -2286,6 +2301,7 @@ exports[`Autosuggest rendering should show "no suggestions" placeholder only if 
     clearTitle=""
     focusedRenderer={[Function]}
     highlightOnEmptyInput={false}
+    indexToSelectOnOutClick={-1}
     inputRef={
       Object {
         "current": <input

@@ -43,6 +43,8 @@ interface Props<S>
     /** Means to overwrite the look and feel of the UI in its blurred state.
      * It should be null or undefined if there is no selection yet */
     customSelectionIndicator?: ReactNode;
+    /** If there is an input value, select the first suggestion on outer click */
+    selectFirstOnOutClick?: boolean;
 }
 
 const { elem } = bem('Autosuggest', styles);
@@ -71,6 +73,7 @@ export function Autosuggest<S>(props: Props<S>) {
         inputRef: inputRefFromProps,
         customSelectionIndicator,
         initInputValue,
+        selectFirstOnOutClick,
         ...rest
     } = props;
     const inputRef = inputRefFromProps || React.createRef<HTMLInputElement>();
@@ -217,6 +220,7 @@ export function Autosuggest<S>(props: Props<S>) {
             selectOnTab
             initInputValue={initInputValue}
             clearInputAfterSelection
+            indexToSelectOnOutClick={inputValue && selectFirstOnOutClick ? 0 : -1}
         />
     );
 }
@@ -235,4 +239,5 @@ Autosuggest.defaultProps = {
     noSuggestionsPlaceholder: '',
     isLoading: false,
     customSelectionIndicator: undefined,
+    selectFirstOnOutClick: false,
 };

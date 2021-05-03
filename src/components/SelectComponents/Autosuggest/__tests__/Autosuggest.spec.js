@@ -200,12 +200,48 @@ describe('Autosuggest', () => {
 
                 expect(mockOnSelectionAdd).toHaveBeenCalledTimes(2);
             });
+            it('should not be called when navigating away from the component with ESCAPE', (done) => {
+                setFocusOnInput();
+                wrapper.find('input').simulate('blur').simulate('keyDown', { key: 'Escape' });
+                setTimeout(() => {
+                    wrapper.update();
+                    expect(mockOnSelectionAdd).toHaveBeenCalledTimes(0);
+                    done();
+                });
+            });
+            it.skip('should be called when there is a highlighted suggestion and navigating away from the component with TAB', (done) => {
+                // TAB navigation is not properly triggered; it works fine in the browser
+                setFocusOnInput();
+                wrapper.find('input').simulate('keyDown', { key: 'ArrowDown' });
+                wrapper.find('input').simulate('keyDown', { key: 'Tab' }).simulate('blur');
+                setTimeout(() => {
+                    wrapper.update();
+                    expect(mockOnBlur).toHaveBeenCalled();
+                    expect(mockOnSelectionAdd).toHaveBeenCalledTimes(1);
+                    done();
+                });
+            });
+            it.skip('should be called with the first suggestion when prop is set, there is user input and user clicks outside of component', (done) => {
+                // outer click navigation is not properly triggered; it works fine in the browser
+                wrapper.setProps({ selectFirstOnOutClick: true });
+                wrapper.update();
+                setFocusOnInput();
+                // click outside ???
+                setTimeout(() => {
+                    wrapper.update();
+                    expect(mockOnBlur).toHaveBeenCalled();
+                    expect(mockOnSelectionAdd).toHaveBeenCalledTimes(1);
+                    done();
+                });
+            });
+        });
+        describe('onSelectionRemove', () => {
             it('should be called on deleting a suggestion by clicking on the x button next to it', () => {
                 selectedSuggestions = SUGGESTIONS.slice(0, 5);
                 wrapper.setProps({ selectedSuggestions });
                 setFocusOnInput();
 
-                expect(mockOnSelectionAdd).not.toHaveBeenCalled();
+                expect(mockOnSelectionRemove).not.toHaveBeenCalled();
                 expect(wrapper.find('SuggestionTag')).toHaveLength(selectedSuggestions.length);
 
                 wrapper.find('SuggestionTag').at(2).find('button').simulate('click');
@@ -236,12 +272,14 @@ describe('Autosuggest', () => {
                 expect(mockOnSelectionRemove).not.toHaveBeenCalled();
             });
         });
-        it('should call onInputValueChange when typing into input field', () => {
-            expect(mockOnInputValueChange).not.toHaveBeenCalled();
+        describe('onInputValueChange', () => {
+            it('should be called when typing into input field', () => {
+                expect(mockOnInputValueChange).not.toHaveBeenCalled();
 
-            wrapper.find('input').simulate('change', { target: { value: 'driver' } });
+                wrapper.find('input').simulate('change', { target: { value: 'driver' } });
 
-            expect(mockOnInputValueChange).toHaveBeenCalled();
+                expect(mockOnInputValueChange).toHaveBeenCalled();
+            });
         });
         it('should clear the input field when a suggestion was selected', () => {
             const textInputValue = 'driver';

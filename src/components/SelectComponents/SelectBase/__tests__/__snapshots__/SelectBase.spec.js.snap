@@ -65,6 +65,7 @@ exports[`SelectBase rendering should initially render empty component correctly 
     }
   }
   highlightOnEmptyInput={true}
+  indexToSelectOnOutClick={-1}
   keepExpandedAfterSelection={false}
   listRenderer={[Function]}
   onBlur={[MockFunction]}

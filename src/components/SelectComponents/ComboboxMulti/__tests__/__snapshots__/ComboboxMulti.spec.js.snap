@@ -47,6 +47,7 @@ exports[`ComboboxMulti rendering should initially render empty component correct
     clearTitle=""
     focusedRenderer={[Function]}
     highlightOnEmptyInput={true}
+    indexToSelectOnOutClick={-1}
     inputRef={
       Object {
         "current": <input
@@ -299,6 +300,7 @@ exports[`ComboboxMulti rendering should render all suggestions from the list 1`]
     clearTitle=""
     focusedRenderer={[Function]}
     highlightOnEmptyInput={true}
+    indexToSelectOnOutClick={-1}
     inputRef={
       Object {
         "current": <input
