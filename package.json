@@ -64,7 +64,7 @@
         "react-popper": "2.2.5",
         "react-virtualized": "~9.22.0",
         "remove-accents": "~0.4.2",
-        "tippy.js": "6.2.7"
+        "tippy.js": "6.3.1"
     },
     "peerDependencies": {
         "react": "^16.8.6",
