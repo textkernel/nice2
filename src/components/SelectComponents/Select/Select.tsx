@@ -2,7 +2,6 @@ import * as React from 'react';
 import { useSelect } from 'downshift';
 import { IoMdArrowDropup, IoMdArrowDropdown } from 'react-icons/io';
 import { bem } from '../../../utils/bem/bem';
-import { FieldWrapper } from '../../FieldWrapper';
 import { List } from '../../List';
 import { SuggestionsList } from '../SuggestionsList';
 import styles from './Select.scss';
@@ -68,36 +67,34 @@ export function Select<S>(props: Props<S>) {
     return (
         <div ref={rootRef} {...rest} {...block()}>
             <div {...elem('main', { isOpen })}>
-                <FieldWrapper isFocused={isOpen} {...elem('field')}>
-                    <div
-                        tabIndex={0}
-                        role="searchbox"
-                        {...elem('wrapper', { isOpen })}
-                        {...getToggleButtonProps({ onClick: handleToggle })}
-                    >
-                        <span {...elem('selected')}>{itemToString(selectedItem)}</span>
-                        {isOpen ? (
-                            <IoMdArrowDropup {...elem('dropdownIcon')} />
-                        ) : (
-                            <IoMdArrowDropdown {...elem('dropdownIcon')} />
-                        )}
-                    </div>
-                    <List
-                        {...getMenuProps({ ref: listRef })}
-                        {...elem('list', { isOpen })}
-                        isControlledNavigation
-                    >
-                        {isOpen && (
-                            <SuggestionsList
-                                suggestionToString={itemToString}
-                                suggestionItemRenderer={optionItemRenderer}
-                                suggestions={items}
-                                getItemProps={getItemProps}
-                                highlightedIndex={highlightedIndex}
-                            />
-                        )}
-                    </List>
-                </FieldWrapper>
+                <div
+                    tabIndex={0}
+                    role="searchbox"
+                    {...elem('wrapper', { isOpen })}
+                    {...getToggleButtonProps({ onClick: handleToggle })}
+                >
+                    <span {...elem('selected')}>{itemToString(selectedItem)}</span>
+                    {isOpen ? (
+                        <IoMdArrowDropup {...elem('dropdownIcon')} />
+                    ) : (
+                        <IoMdArrowDropdown {...elem('dropdownIcon')} />
+                    )}
+                </div>
+                <List
+                    {...getMenuProps({ ref: listRef })}
+                    {...elem('list', { isOpen })}
+                    isControlledNavigation
+                >
+                    {isOpen && (
+                        <SuggestionsList
+                            suggestionToString={itemToString}
+                            suggestionItemRenderer={optionItemRenderer}
+                            suggestions={items}
+                            getItemProps={getItemProps}
+                            highlightedIndex={highlightedIndex}
+                        />
+                    )}
+                </List>
             </div>
         </div>
     );

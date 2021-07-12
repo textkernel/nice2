@@ -23,7 +23,7 @@ describe('SelectBase', () => {
     let wrapper;
     let inputNode;
 
-    const setFocusOnInput = () => wrapper.find('.SelectBase__field').at(1).simulate('click');
+    const setFocusOnInput = () => wrapper.find('.SelectBase__main').at(0).simulate('click');
 
     beforeEach(() => {
         wrapper = mount(
@@ -84,7 +84,7 @@ describe('SelectBase', () => {
             wrapper.find('li').at(0).children().simulate('click');
 
             expect(wrapper.find('li')).toHaveLength(0);
-            expect(wrapper.find('FieldWrapper').prop('isFocused')).toBeFalsy();
+            expect(wrapper.find('.SelectBase__main--focused').length).toBe(0);
         });
         it('should stay focused when suggestion is selected with keepExpandedAfterSelection set to true', () => {
             wrapper.setProps({ keepExpandedAfterSelection: true });

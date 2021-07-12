@@ -10,7 +10,7 @@ import {
 } from '../src/components/AutosuggestDeprecated/__mocks__/suggestions';
 
 type TSuggestion = { name: string };
-type TComplexSuggestion = { name: string; type: string };
+type TComplexSuggestion = { name: string; type: string; count: number };
 
 const searchFor = {
     name: '',
@@ -357,6 +357,7 @@ storiesOf('Organisms|Select Components', module)
     .add(
         'Autosuggest with custom item renderer',
         (storyContext) => {
+            const numberFormatter = new Intl.NumberFormat();
             const store = storyContext?.parameters.getStore();
             const getSuggestions = (): TComplexSuggestion[] => {
                 const suggestions = COMPLEX_SUGGESTIONS.filter(
@@ -426,25 +427,53 @@ storiesOf('Organisms|Select Components', module)
                 if (!item) {
                     return null;
                 }
+
+                const count = numberFormatter.format(item.count);
+
                 if (i === 0 || item.type !== array[i - 1].type) {
                     return (
                         <div
                             style={{
-                                borderTop: '1px solid grey',
                                 width: '100%',
                                 margin: '-12px',
                                 padding: '12px',
+                                display: 'flex',
+                                justifyContent: 'space-between',
                             }}
                         >
-                            {item.name}
-                            <span
-                                style={{ color: 'grey', marginLeft: '6px' }}
-                            >{`- ${item.type}`}</span>
+                            <div
+                                style={{
+                                    whiteSpace: 'nowrap',
+                                    overflow: 'hidden',
+                                    textOverflow: 'ellipsis',
+                                }}
+                            >
+                                {item.name}
+                                <span
+                                    style={{ color: 'var(--color-muted', marginLeft: '6px' }}
+                                >{`— ${item.type}`}</span>
+                            </div>
+                            <span style={{ color: 'var(--color-muted)' }}>{count}</span>
                         </div>
                     );
                 }
 
-                return <div>{item.name}</div>;
+                return (
+                    <div
+                        style={{ width: '100%', display: 'flex', justifyContent: 'space-between' }}
+                    >
+                        <span
+                            style={{
+                                whiteSpace: 'nowrap',
+                                overflow: 'hidden',
+                                textOverflow: 'ellipsis',
+                            }}
+                        >
+                            {item.name}
+                        </span>
+                        <span style={{ color: 'var(--color-muted)' }}>{count}</span>
+                    </div>
+                );
             };
 
             return (

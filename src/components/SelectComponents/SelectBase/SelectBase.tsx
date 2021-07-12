@@ -1,8 +1,8 @@
 import * as React from 'react';
 import Downshift from 'downshift';
+import { Button } from '../../Buttons';
 import { bem } from '../../../utils/bem';
 import { useBrowserTabVisibilityChange } from '../../../hooks';
-import { FieldWrapper } from '../../FieldWrapper';
 import { List } from '../../List';
 import { Props } from './interfaces';
 import styles from './SelectBase.scss';
@@ -235,16 +235,9 @@ export function SelectBase<S>(props: Props<S>) {
                     highlightedIndex,
                     openMenu,
                 }) => (
-                    <div {...elem('main', stateAndProps)}>
-                        <FieldWrapper
-                            clearLabel={clearTitle}
-                            onClear={handleClearSelectedSuggestions}
-                            showClearButton={!focused && showClearButton}
-                            isFocused={focused && !disabled}
-                            disabled={disabled}
-                            onClick={handleWrapperClick(openMenu)}
-                            {...elem('field', stateAndProps)}
-                        >
+                    // eslint-disable-next-line
+                    <div {...elem('main', stateAndProps)} onClick={handleWrapperClick(openMenu)}>
+                        <div {...elem('content')}>
                             {focused && !disabled
                                 ? focusedRenderer({
                                       getInputProps: getInputPropsWithUpdatedRef(getInputProps),
@@ -259,24 +252,34 @@ export function SelectBase<S>(props: Props<S>) {
                                       getToggleButtonProps,
                                       onFocus: handleInputOnFocus(openMenu),
                                   })}
-                            <List
-                                {...getMenuProps({
-                                    ...elem('list', stateAndProps),
-                                    ref: listRef.current,
-                                    isControlledNavigation: true,
-                                })}
+                        </div>
+                        {!focused && showClearButton && (
+                            <Button
+                                isInline
+                                context="link"
+                                onClick={handleClearSelectedSuggestions}
+                                {...elem('clearButton', props)}
                             >
-                                {focused && !disabled
-                                    ? listRenderer({
-                                          suggestionToString,
-                                          suggestions,
-                                          getItemProps,
-                                          highlightedIndex,
-                                          inputValue: inputValueRecall,
-                                      })
-                                    : null}
-                            </List>
-                        </FieldWrapper>
+                                {clearTitle}
+                            </Button>
+                        )}
+                        <List
+                            {...getMenuProps({
+                                ...elem('list', stateAndProps),
+                                ref: listRef.current,
+                                isControlledNavigation: true,
+                            })}
+                        >
+                            {focused && !disabled
+                                ? listRenderer({
+                                      suggestionToString,
+                                      suggestions,
+                                      getItemProps,
+                                      highlightedIndex,
+                                      inputValue: inputValueRecall,
+                                  })
+                                : null}
+                        </List>
                     </div>
                 )}
             </Downshift>

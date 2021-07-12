@@ -11,15 +11,15 @@ export const SUGGESTIONS = [
 ];
 
 export const COMPLEX_SUGGESTIONS = [
-    { name: 'Sun', type: 'star' },
-    { name: 'Moon', type: 'star' },
-    { name: 'Mercury', type: 'planet' },
-    { name: 'Venus', type: 'planet' },
-    { name: 'Earth', type: 'planet' },
-    { name: 'Mars', type: 'planet' },
-    { name: 'Jupiter', type: 'planet' },
-    { name: 'Saturn', type: 'planet' },
-    { name: 'Neptun', type: 'planet' },
+    { name: 'Sun', type: 'Star', count: 1234 },
+    { name: 'Moon', type: 'Star', count: 1234 },
+    { name: 'Mercury', type: 'Planet', count: 1234 },
+    { name: 'Venus', type: 'Planet', count: 1234 },
+    { name: 'Earth', type: 'Planet', count: 1234 },
+    { name: 'Mars', type: 'Planet', count: 1234 },
+    { name: 'Jupiter', type: 'Planet', count: 1234 },
+    { name: 'Saturn', type: 'Planet', count: 1234 },
+    { name: 'Neptun', type: 'Planet', count: 1234 },
 ];
 
 export const SUGGESTION_TO_STRING = (item) => (item ? item.name : '');

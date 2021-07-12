@@ -133,55 +133,41 @@ exports[`SelectBase rendering should initially render empty component correctly 
         aria-labelledby="downshift-0-label"
         aria-owns={null}
         className="SelectBase__main"
+        onClick={[Function]}
         role="combobox"
       >
-        <FieldWrapper
-          className="SelectBase__field"
-          clearLabel=""
-          disabled={false}
-          isFocused={false}
-          onClear={[Function]}
-          onClick={[Function]}
-          showClearButton={false}
+        <div
+          className="SelectBase__content"
         >
-          <div
-            className="FieldWrapper SelectBase__field"
-            disabled={false}
-            onClick={[Function]}
-          >
-            <div
-              className="FieldWrapper__content"
-            >
-              <input
-                aria-activedescendant={null}
-                aria-autocomplete="list"
-                aria-controls={null}
-                aria-labelledby="downshift-0-label"
-                autoComplete="off"
-                id="downshift-0-input"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onKeyDown={[Function]}
-                value=""
-              />
-              <List
-                aria-labelledby="downshift-0-label"
-                doSelectOnNavigate={false}
-                id="downshift-0-menu"
-                isControlledNavigation={true}
-                isDivided={false}
-                role="listbox"
-              >
-                <ul
-                  aria-labelledby="downshift-0-label"
-                  className="List"
-                  id="downshift-0-menu"
-                  role="listbox"
-                />
-              </List>
-            </div>
-          </div>
-        </FieldWrapper>
+          <input
+            aria-activedescendant={null}
+            aria-autocomplete="list"
+            aria-controls={null}
+            aria-labelledby="downshift-0-label"
+            autoComplete="off"
+            id="downshift-0-input"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onKeyDown={[Function]}
+            value=""
+          />
+        </div>
+        <List
+          aria-labelledby="downshift-0-label"
+          className="SelectBase__list"
+          doSelectOnNavigate={false}
+          id="downshift-0-menu"
+          isControlledNavigation={true}
+          isDivided={false}
+          role="listbox"
+        >
+          <ul
+            aria-labelledby="downshift-0-label"
+            className="List SelectBase__list"
+            id="downshift-0-menu"
+            role="listbox"
+          />
+        </List>
       </div>
     </Downshift>
   </div>

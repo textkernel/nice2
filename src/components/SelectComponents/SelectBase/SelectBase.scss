@@ -4,16 +4,55 @@
 
     &__main {
         position: relative;
+        display: flex;
+        align-items: center;
         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+        border: 1px solid var(--border-color-strong);
         background-color: var(--color-background);
         transition-property: box-shadow, transform, border-color;
         transition-duration: var(--transition-duration);
         border-radius: var(--border-radius);
+        width: 100%;
+        z-index: 400;
 
-        &--focused {
-            position: absolute;
-            z-index: 400;
-            width: 100%;
+        &--focused,
+        &:focus {
+            border-color: var(--color-brand);
+            outline: none;
+        }
+
+        &--disabled {
+            cursor: not-allowed;
+        }
+    }
+
+    &__content {
+        width: 100%;
+    }
+
+    &__clearButton {
+        display: none;
+        max-width: 30%;
+        margin-left: auto;
+        flex-shrink: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        background-color: var(--color-background);
+        transition: all var(--transition-duration);
+    }
+
+    &:hover:not(.SelectBase--disabled) {
+        .SelectBase__main {
+            border-color: var(--color-brand);
+        }
+
+        & .SelectBase__content {
+            overflow: hidden;
+        }
+
+        & .SelectBase__clearButton {
+            display: block;
         }
     }
 
@@ -25,11 +64,25 @@
         margin: var(--spacing-normal);
     }
 
-    &__list--focused {
+    &__list {
+        position: absolute;
+        top: 100%;
+        left: -1px;
+        margin-top: var(--spacing-normal);
+        min-width: 100%;
+        max-width: 150%;
         max-height: 300px;
+        display: none;
+        border: 1px solid var(--color-neutral);
+        border-radius: var(--border-radius);
+        background-color: var(--color-background);
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
         overflow: auto;
-        border-top: 1px solid var(--border-color-light);
-        margin-top: -1px;
+        overflow-x: hidden;
+
+        &--focused {
+            display: block;
+        }
     }
 
     &__loaderContainer {
