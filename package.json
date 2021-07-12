@@ -49,7 +49,7 @@
     "homepage": "https://github.com/textkernel/oneui#readme",
     "sideEffects": false,
     "dependencies": {
-        "@googlemaps/js-api-loader": "1.11.4",
+        "@googlemaps/js-api-loader": "1.12.1",
         "@popperjs/core": "~2.9.0",
         "@react-google-maps/api": "~1.13.0",
         "@textkernel/bem": "~0.2.4",
