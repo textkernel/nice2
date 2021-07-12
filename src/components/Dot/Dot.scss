@@ -1,0 +1,58 @@
+@keyframes pulsate {
+    0% {
+        opacity: 1;
+        transform: scale(.5);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(3.5);
+    }
+}
+
+.Dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: default;
+    position: relative;
+    box-shadow: 0 0 0 2px var(--color-neutral-10);
+
+    &--isClickable {
+        cursor: pointer;
+    }
+
+    &--context {
+        @each $context in (neutral, brand, primary, accent, info, good, warning, bad) {
+            &_#{ $context } {
+                background-color: var(--color-#{$context});
+
+                &:after {
+                    background-color: var(--color-#{$context});
+                }
+
+                &.Dot--isHoverable {
+                    background-color: var(--color-#{$context}-25);
+
+                    &:hover {
+                        background-color: var(--color-#{$context}-60);
+                    }
+                }
+            }
+        }
+    }
+
+    &--isPulsating {
+        &:after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            border-radius: 50%;
+            animation: pulsate 1.5s ease-out infinite;
+        }
+    }
+}

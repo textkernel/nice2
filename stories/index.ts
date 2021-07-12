@@ -6,6 +6,7 @@ import './CandidateAvatar';
 import './Callout';
 import './Chip';
 import './ContentPlaceholder';
+import './Dot';
 import './Drawer';
 import './Heading';
 import './Highlighter';
