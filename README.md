@@ -75,9 +75,7 @@ import { Alert } from '@textkernel/oneui';
 
 Please note that any properties that are not documented in the component prop types definition are applied to the top level HTML element unless mentioned otherwise. These undocumented props are also not described in Storybook.
 
-# Examples
-
-## Storybook
+# Storybook
 
 OneUI comes with a Storybook of examples for all components. [Click here](https://textkernel.github.io/oneui/) to check it out.
 
@@ -91,10 +89,6 @@ $ npm i -g @storybook/cli
 
 2. Within the OneUI root, run `npm run storybook`
 3. Go to http://localhost:9001 to check out examples of all OneUI components
-
-## Example implementation
-
-An implementation example can be found in the example directory, along with instructions on how to run it.
 
 # Theming
 
