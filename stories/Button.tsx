@@ -13,6 +13,7 @@ storiesOf('Atoms|Button', module)
             size={select('Size', SIZES, SIZES[1])}
             isBlock={boolean('isBlock', false)}
             isInline={boolean('isInline', false)}
+            isLoading={boolean('isLoading', false)}
             type={select('Type', ['submit', 'button'], 'submit')}
             disabled={boolean('Disabled', false)}
             onClick={(e) => {

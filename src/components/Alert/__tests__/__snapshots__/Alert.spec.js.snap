@@ -51,6 +51,7 @@ exports[`<Alert> that renders an alert should have a button that works 1`] = `
         disabled={false}
         isBlock={false}
         isInline={false}
+        isLoading={false}
         onClick={[MockFunction]}
         size="normal"
         type="button"

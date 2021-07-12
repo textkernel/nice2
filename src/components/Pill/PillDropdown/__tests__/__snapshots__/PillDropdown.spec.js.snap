@@ -25,6 +25,7 @@ exports[`<PillDropdown> component should render correctly 1`] = `
           disabled={false}
           isBlock={false}
           isInline={false}
+          isLoading={false}
           onClick={[Function]}
           size="small"
           type="button"

@@ -187,6 +187,7 @@ exports[`<Pill> component should open dropdown when button is clicked 1`] = `
               disabled={false}
               isBlock={false}
               isInline={false}
+              isLoading={false}
               onClick={[Function]}
               size="small"
               type="button"

@@ -21,6 +21,7 @@ exports[`<Pagination> that renders a pagination component should render correctl
       disabled={false}
       isBlock={false}
       isInline={false}
+      isLoading={false}
       onClick={[Function]}
       size="normal"
       type="button"
@@ -50,6 +51,7 @@ exports[`<Pagination> that renders a pagination component should render correctl
         disabled={false}
         isBlock={false}
         isInline={false}
+        isLoading={false}
         onClick={[Function]}
         size="normal"
         type="button"
@@ -85,6 +87,7 @@ exports[`<Pagination> that renders a pagination component should render correctl
         disabled={false}
         isBlock={false}
         isInline={false}
+        isLoading={false}
         onClick={[Function]}
         size="normal"
         type="button"
@@ -115,6 +118,7 @@ exports[`<Pagination> that renders a pagination component should render correctl
         disabled={false}
         isBlock={false}
         isInline={false}
+        isLoading={false}
         onClick={[Function]}
         size="normal"
         type="button"
@@ -145,6 +149,7 @@ exports[`<Pagination> that renders a pagination component should render correctl
         disabled={false}
         isBlock={false}
         isInline={false}
+        isLoading={false}
         onClick={[Function]}
         size="normal"
         type="button"
@@ -175,6 +180,7 @@ exports[`<Pagination> that renders a pagination component should render correctl
         disabled={false}
         isBlock={false}
         isInline={false}
+        isLoading={false}
         onClick={[Function]}
         size="normal"
         type="button"
@@ -205,6 +211,7 @@ exports[`<Pagination> that renders a pagination component should render correctl
         disabled={false}
         isBlock={false}
         isInline={false}
+        isLoading={false}
         onClick={[Function]}
         size="normal"
         type="button"
@@ -235,6 +242,7 @@ exports[`<Pagination> that renders a pagination component should render correctl
         disabled={false}
         isBlock={false}
         isInline={false}
+        isLoading={false}
         onClick={[Function]}
         size="normal"
         type="button"
@@ -265,6 +273,7 @@ exports[`<Pagination> that renders a pagination component should render correctl
         disabled={false}
         isBlock={false}
         isInline={false}
+        isLoading={false}
         onClick={[Function]}
         size="normal"
         type="button"
@@ -288,6 +297,7 @@ exports[`<Pagination> that renders a pagination component should render correctl
       disabled={false}
       isBlock={false}
       isInline={false}
+      isLoading={false}
       onClick={[Function]}
       size="normal"
       type="button"
@@ -332,6 +342,7 @@ exports[`<Pagination> that renders a pagination component should render correctl
         disabled={false}
         isBlock={false}
         isInline={false}
+        isLoading={false}
         onClick={[Function]}
         size="normal"
         type="button"
@@ -362,6 +373,7 @@ exports[`<Pagination> that renders a pagination component should render correctl
         disabled={false}
         isBlock={false}
         isInline={false}
+        isLoading={false}
         onClick={[Function]}
         size="normal"
         type="button"
@@ -392,6 +404,7 @@ exports[`<Pagination> that renders a pagination component should render correctl
         disabled={false}
         isBlock={false}
         isInline={false}
+        isLoading={false}
         onClick={[Function]}
         size="normal"
         type="button"
@@ -422,6 +435,7 @@ exports[`<Pagination> that renders a pagination component should render correctl
         disabled={false}
         isBlock={false}
         isInline={false}
+        isLoading={false}
         onClick={[Function]}
         size="normal"
         type="button"
@@ -452,6 +466,7 @@ exports[`<Pagination> that renders a pagination component should render correctl
         disabled={false}
         isBlock={false}
         isInline={false}
+        isLoading={false}
         onClick={[Function]}
         size="normal"
         type="button"
@@ -482,6 +497,7 @@ exports[`<Pagination> that renders a pagination component should render correctl
         disabled={false}
         isBlock={false}
         isInline={false}
+        isLoading={false}
         onClick={[Function]}
         size="normal"
         type="button"
@@ -512,6 +528,7 @@ exports[`<Pagination> that renders a pagination component should render correctl
         disabled={false}
         isBlock={false}
         isInline={false}
+        isLoading={false}
         onClick={[Function]}
         size="normal"
         type="button"
@@ -542,6 +559,7 @@ exports[`<Pagination> that renders a pagination component should render correctl
         disabled={false}
         isBlock={false}
         isInline={false}
+        isLoading={false}
         onClick={[Function]}
         size="normal"
         type="button"
@@ -572,6 +590,7 @@ exports[`<Pagination> that renders a pagination component should render correctl
         disabled={false}
         isBlock={false}
         isInline={false}
+        isLoading={false}
         onClick={[Function]}
         size="normal"
         type="button"
@@ -602,6 +621,7 @@ exports[`<Pagination> that renders a pagination component should render correctl
         disabled={false}
         isBlock={false}
         isInline={false}
+        isLoading={false}
         onClick={[Function]}
         size="normal"
         type="button"

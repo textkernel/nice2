@@ -9,6 +9,7 @@ exports[`<PaginationButton> that renders a page button should render correctly w
   disabled={false}
   isBlock={false}
   isInline={false}
+  isLoading={false}
   size="normal"
   type="button"
 >

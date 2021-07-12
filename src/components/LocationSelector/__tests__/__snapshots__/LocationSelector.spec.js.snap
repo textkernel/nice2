@@ -125,6 +125,7 @@ exports[`LocationSelector component should render LocationSelector properly when
           disabled={false}
           isBlock={false}
           isInline={true}
+          isLoading={false}
           onClick={[Function]}
           size="normal"
           type="button"
@@ -540,6 +541,7 @@ exports[`LocationSelector component should render LocationSelector propertly whe
           disabled={false}
           isBlock={false}
           isInline={true}
+          isLoading={false}
           onClick={[Function]}
           size="normal"
           type="button"
